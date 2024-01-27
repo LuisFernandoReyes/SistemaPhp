@@ -1,7 +1,7 @@
 <?php
 
 $controller= "Pages";
-$accion= "Inicio";
+$accion= "Index";
 
 if( isset($_GET['controller']) && isset($_GET['accion'])){
 
@@ -12,5 +12,5 @@ if( isset($_GET['controller']) && isset($_GET['accion'])){
     
 }
 
-require("../Sistema/View/template.php");
+require("../Sistema/View/Template.php");
 ?>

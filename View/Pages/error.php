@@ -1,1 +1,1 @@
-Esta es la pagina del Error.php
+This is the error Page

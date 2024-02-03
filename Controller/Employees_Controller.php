@@ -5,6 +5,7 @@ DataBase::createInstance();
 class EmployeesController{
 
     public  function index() {
+        print_r(Employee::read());
         include_once("./View/Employees/Index.php");
     }
 

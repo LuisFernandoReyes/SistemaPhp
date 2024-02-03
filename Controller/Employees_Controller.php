@@ -1,5 +1,6 @@
 <?php
-include('conexion.php');
+include_once('Model/employee.php');
+include_once('conexion.php');
 DataBase::createInstance();
 class EmployeesController{
 
@@ -10,6 +11,9 @@ class EmployeesController{
     public  function create() {
         if($_POST){
             print_r($_POST);
+            $name=$_POST['name'];
+            $email=$_POST['email'];
+            employee::create($name,$email);
 
         }
         include_once("./View/Employees/Create.php");

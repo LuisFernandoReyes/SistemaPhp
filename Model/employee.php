@@ -1,6 +1,6 @@
 <?php
 
-class employee{
+class Employee{
     public static function create($name, $email){
         $conexionDB=DataBase::createInstance();
         $sql=$conexionDB->prepare("INSERT INTO employees (name, email) VALUES (?,?)");
@@ -8,6 +8,5 @@ class employee{
 
     }
 }
-
 
 ?>

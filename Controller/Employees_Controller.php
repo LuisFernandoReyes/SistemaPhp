@@ -1,4 +1,6 @@
 <?php
+include('conexion.php');
+DataBase::createInstance();
 class EmployeesController{
 
     public  function index() {
@@ -6,6 +8,10 @@ class EmployeesController{
     }
 
     public  function create() {
+        if($_POST){
+            print_r($_POST);
+
+        }
         include_once("./View/Employees/Create.php");
     }
 

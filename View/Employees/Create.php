@@ -32,9 +32,6 @@
                 type="submit"
                 value="Agregar Empleado"
             />
-            
-            
-
         </form>
     </div>
 </div>

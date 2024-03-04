@@ -1,6 +1,15 @@
 <!--
 http://localhost/Sistema/?controller=Employees&accion=Index
 -->
+<a
+    name=""
+    id=""
+    class="btn btn-primary"
+    href="?controller=Employees&accion=Create"
+    role="button"
+    >Button</a
+>
+
 
 <table class="table table-bordered" style="text-align: center;">
     <thead>
@@ -19,7 +28,7 @@ http://localhost/Sistema/?controller=Employees&accion=Index
             <td>
                 <div class="btn-group" role="group" aria-label="Button group name">
                     <a href="#" class="btn btn-info">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="?controller=Employees&accion=delete&id=<?php echo $employee->id ?>" class="btn btn-danger">Delete</a>
 
                 </div>
             </td>

@@ -28,6 +28,12 @@ class Employee{
         $sql->execute(array($name,$email));
 
     }
+
+    public static function delete($id){
+        $conexionDB=DataBase::createInstance();
+        $sql= $conexionDB -> prepare("DELETE FROM employees WHERE id = ?");
+        $sql->execute(array($id));
+    }
 }
 
 ?>

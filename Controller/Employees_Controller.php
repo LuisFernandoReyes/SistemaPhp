@@ -15,6 +15,7 @@ class EmployeesController{
             $name=$_POST['name'];
             $email=$_POST['email'];
             Employee::create($name,$email);
+            header("location:?controller=Employees&accion=index");
 
         }
         include_once("./View/Employees/Create.php");
@@ -24,7 +25,12 @@ class EmployeesController{
         include_once("./View/Employees/Edit.php");
     }
 
-
+    public  function delete() {
+        //Validar que el valor existe en la base de datos
+        $id=$_GET["id"] ;
+        Employee::delete($id);
+        header("location:?controller=Employees&accion=index");
+    }
 }
 
 ?>

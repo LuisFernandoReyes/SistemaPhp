@@ -22,6 +22,9 @@ class EmployeesController{
     }
 
     public  function edit() {
+        $id=$_GET["id"] ;
+        //Guardamos la informacion del empleado por ID en la variable employee
+        $employee= Employee::search($id);
         include_once("./View/Employees/Edit.php");
     }
 

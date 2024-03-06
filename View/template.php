@@ -22,7 +22,7 @@
                     >Sistema <span class="visually-hidden">(current)</span></a
                 >
                 <a class="nav-item nav-link" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">Empleados</a>
+                <a class="nav-item nav-link" href="?controller=Employees&accion=index">Empleados</a>
             </div>
         </nav>
         

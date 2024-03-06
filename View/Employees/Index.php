@@ -27,7 +27,7 @@ http://localhost/Sistema/?controller=Employees&accion=Index
             <td> <?php echo $employee->email ?> </td>
             <td>
                 <div class="btn-group" role="group" aria-label="Button group name">
-                    <a href="#" class="btn btn-info">Edit</a>
+                    <a href="?controller=Employees&accion=edit&id=<?php echo $employee->id ?>" class="btn btn-info">Edit</a>
                     <a href="?controller=Employees&accion=delete&id=<?php echo $employee->id ?>" class="btn btn-danger">Delete</a>
 
                 </div>

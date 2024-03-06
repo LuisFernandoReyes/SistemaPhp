@@ -34,6 +34,15 @@ class Employee{
         $sql= $conexionDB -> prepare("DELETE FROM employees WHERE id = ?");
         $sql->execute(array($id));
     }
+
+    public static function search($id){
+        $conexionDB=DataBase::createInstance();
+        $sql= $conexionDB -> prepare("SELECT * FROM employees WHERE id = ?");
+        $sql->execute(array($id));
+        $employee= $sql->fetch();
+        return new Employee($employee['id'],$employee['name'],$employee['email']);
+    }
+
 }
 
 ?>

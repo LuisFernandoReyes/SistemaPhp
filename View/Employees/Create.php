@@ -9,13 +9,14 @@
 
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
-                <input type="text" 
+                <input required type="text" 
                 class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="Nombre" />
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Correo</label>
                 <input
+                    required
                     type="email"
                     class="form-control"
                     name="email"
@@ -32,6 +33,7 @@
                 type="submit"
                 value="Agregar Empleado"
             />
+            <a href="?controller=employees&accion=index" class="btn btn-primary">Cancelar</a>
         </form>
     </div>
 </div>

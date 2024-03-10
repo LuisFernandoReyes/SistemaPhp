@@ -1,17 +1,15 @@
 <!--
 http://localhost/Sistema/?controller=Employees&accion=Index
 -->
-<a
-    name=""
-    id=""
-    class="btn btn-primary"
-    href="?controller=Employees&accion=Create"
-    role="button"
-    >Button</a
->
-
-
-<table class="table table-bordered" style="text-align: center;">
+<div class="card">
+    <div class="card-header">
+        <a name="" 
+        id="" class="btn btn-primary" 
+        href="?controller=Employees&accion=Create" 
+        role="button">Agregar Empleado</a>
+    </div>
+    <div class="card-body">
+    <table class="table table-bordered" style="text-align: center;">
     <thead>
         <tr>
             <th>ID</th>
@@ -37,3 +35,7 @@ http://localhost/Sistema/?controller=Employees&accion=Index
         <?php } ?>
     </tbody>
 </table>
+
+    </div>
+
+</div>

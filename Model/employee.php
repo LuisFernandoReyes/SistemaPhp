@@ -43,6 +43,12 @@ class Employee{
         return new Employee($employee['id'],$employee['name'],$employee['email']);
     }
 
+    public static function update($id,$name, $email){
+        $conexionDB=DataBase::createInstance();
+        $sql=$conexionDB->prepare("UPDATE employees SET name=?, email=? WHERE id=? ");
+        $sql->execute(array($name,$email, $id));
+    }
+
 }
 
 ?>

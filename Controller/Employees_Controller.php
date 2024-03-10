@@ -22,9 +22,20 @@ class EmployeesController{
     }
 
     public  function edit() {
+        
+        if ($_POST) {//
+            $id= $_POST["id"];
+            $name= $_POST["name"];
+            $email= $_POST["email"];
+
+            Employee::update( $id, $name ,$email );
+            header("location:?controller=employees&accion=index");
+        }
         $id=$_GET["id"] ;
         //Guardamos la informacion del empleado por ID en la variable employee
         $employee= Employee::search($id);
+
+
         include_once("./View/Employees/Edit.php");
     }
 
